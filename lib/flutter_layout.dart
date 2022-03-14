@@ -20,9 +20,8 @@ class FlutterLayout extends StatelessWidget {
                 color: Colors.blueAccent,
                 size: 50.0,
               ),
-              Text(
-                'WiFI',
-                style: TextStyle(color: Color(0xfff1c40f), fontSize: 20.0),
+              DescText(
+                iconText: 'WiFI',
               ),
             ]),
             Column(children: const <Widget>[
@@ -31,10 +30,9 @@ class FlutterLayout extends StatelessWidget {
                 color: Colors.red,
                 size: 50.0,
               ),
-              Text(
-                'Power',
-                style: TextStyle(color: Color(0xfff1c40f), fontSize: 20.0),
-              ),
+              DescText(
+                iconText: 'Power',
+              )
             ]),
             Column(children: const <Widget>[
               Icon(
@@ -42,14 +40,29 @@ class FlutterLayout extends StatelessWidget {
                 color: Colors.green,
                 size: 50.0,
               ),
-              Text(
-                'Storage',
-                style: TextStyle(color: Color(0xfff1c40f), fontSize: 20.0),
-              ),
+              DescText(
+                iconText: 'Storage',
+              )
             ]),
           ],
         ),
       ),
+    );
+  }
+}
+
+class DescText extends StatelessWidget {
+  final String? iconText;
+  const DescText({
+    Key? key,
+    this.iconText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      "$iconText",
+      style: TextStyle(color: Color(0xfff1c40f), fontSize: 20.0),
     );
   }
 }
