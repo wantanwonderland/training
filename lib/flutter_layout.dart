@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'desc_text.dart';
+
 class FlutterLayout extends StatelessWidget {
   const FlutterLayout({Key? key}) : super(key: key);
 
@@ -47,22 +49,6 @@ class FlutterLayout extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class DescText extends StatelessWidget {
-  final String? iconText;
-  const DescText({
-    Key? key,
-    this.iconText,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      "$iconText",
-      style: TextStyle(color: Color(0xfff1c40f), fontSize: 20.0),
     );
   }
 }
