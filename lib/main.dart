@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:training/flutter_layout.dart';
+import 'package:training/screen/flutter_layout.dart';
+import 'package:training/screen/second.dart';
+import 'package:training/screen/todoScreen/detail.dart';
+import 'package:training/screen/todoScreen/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +28,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const FlutterLayout(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => TodoScreen(),
+        '/second': (context) => const Second(),
+      },
     );
   }
 }

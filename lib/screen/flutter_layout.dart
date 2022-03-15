@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/sidebar.dart';
 
 import 'desc_text.dart';
 
@@ -8,8 +9,9 @@ class FlutterLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Sidebar(),
       appBar: AppBar(
-        title: const Text("Layout"),
+        title: const Text("First"),
       ),
       body: Container(
         padding: const EdgeInsets.all(16.0),
